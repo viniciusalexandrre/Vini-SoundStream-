@@ -1,7 +1,13 @@
+import InputSearch from "@/ui/inputSearch";
+import Menu from "@/ui/menu";
+import ThemeToglle from "@/ui/themeToggle";
+
 export default function Home() {
   return (
     <div>
-      <h1>Olá Mundo</h1>
+      {/* <Menu /> */}
+      {/* <InputSearch placeholder="PESQUISA..." /> */}
+      <ThemeToglle />
     </div>
   );
 }

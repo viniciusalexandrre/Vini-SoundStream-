@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  max-width: 76px;
+  background-color: var(--background-color4);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2px;
+  border-radius: 40px;
+
+  & > button {
+    border: none;
+    border-radius: 20px;
+    padding: 11px 10px;
+    border-radius: 30px;
+    background-color: var(--background-color2);
+    display: flex;
+    align-items: center;
+  }
+}

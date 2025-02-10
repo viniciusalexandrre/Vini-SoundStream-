@@ -1,0 +1,46 @@
+:root {
+  //background-color
+  --background-color4: #d9d9d9;
+  --background-color3: #8c8c8c;
+  --background-color2: #404040;
+  --background-color1: #121212;
+  --background-color0: #000;
+
+  //button-color
+  --button-color1: rgba(221, 125, 223, 0.78);
+  --button-color0: #8c8c8c;
+
+  //border-color
+  --border2: 8px solid #000;
+  --border1: 1px solid #000;
+  --border0: 2px solid #000;
+
+  //box-shadow
+  --box-shadow2: 1px 1px 0px 0px #000;
+  --box-shadow1: 4px 6px 0px 0px #000;
+  --box-shadow0: 2px 4px 0px 0px #000;
+
+  //color font
+  --font-color0: #fff;
+}
+
+body {
+  margin: 0px;
+  width: 100%;
+  overflow-x: none;
+  background-color: var(--background-color1);
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
