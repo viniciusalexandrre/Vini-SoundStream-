@@ -1,7 +1,5 @@
-export default function Home() {
-  return (
-    <div>
-      <h1>Olá Mundo</h1>
-    </div>
-  );
+import Home from '@/components/HomeComponents'
+
+export default function Page() {
+  return <Home />
 }

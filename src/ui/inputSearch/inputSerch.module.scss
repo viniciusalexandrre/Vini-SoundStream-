@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  max-width: 376px;
+  position: relative;
+  display: flex;
+
+  & > input {
+    width: 100%;
+    max-width: 376px;
+    padding: 16px 14px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    outline: 0;
+    font-size: 14px;
+    color: var(--background-color0);
+  }
+  & > button {
+    position: absolute;
+    padding: 4px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow2);
+    background-color: var(--background-color3);
+    width: 100%;
+    max-width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 14px;
+    top: 8px;
+  }
+}

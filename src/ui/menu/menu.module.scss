@@ -1,0 +1,40 @@
+.containerMenu {
+  background-color: var(--background-color2);
+  display: grid;
+  width: 100%;
+  max-width: 242px;
+  height: 100%;
+  max-height: 1132px;
+  padding: 25px 10px;
+  text-align: center;
+  border-radius: 10px;
+  border: var(--border0);
+
+  & > h1 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--font-color0);
+    margin-bottom: 60px;
+  }
+  & > div:nth-child(2) {
+    display: grid;
+    gap: 10px;
+    max-width: 222px;
+    width: 100%;
+    & > button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      border-radius: 10px;
+      border: 1px solid var(--border1);
+      box-shadow: var(--box-shadow0);
+      padding: 18px;
+
+      & > a {
+        color: #000;
+        font-size: 14px;
+      }
+    }
+  }
+}
