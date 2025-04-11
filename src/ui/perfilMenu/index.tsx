@@ -1,18 +1,18 @@
-import Image from "next/image";
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import Image from 'next/image'
+import { ButtonHTMLAttributes, ReactNode } from 'react'
 
 type perfilMenuProps = {
-  children: ReactNode;
-  image: string;
-} & ButtonHTMLAttributes<HTMLButtonElement>;
+  children: ReactNode
+  image: string
+} & ButtonHTMLAttributes<HTMLButtonElement>
 
-const perfilMenu = ({ children, image, ...props }: perfilMenuProps) => {
+const PerfilMenu = ({ children, image, ...props }: perfilMenuProps) => {
   return (
     <button {...props}>
-      <Image src={image} alt="" width={"34"} height={"34"} />
+      <Image src={image} alt="" width={'34'} height={'34'} />
       <span>{children}</span>
     </button>
-  );
-};
+  )
+}
 
-export default perfilMenu;
+export default PerfilMenu

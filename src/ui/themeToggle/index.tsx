@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Button from '../button';
-import style from './themeToggle.module.scss';
+import Image from 'next/image'
+import Button from '../Button'
+import style from './themeToggle.module.scss'
 
 const ThemeToglle = () => {
   return (
@@ -12,7 +12,7 @@ const ThemeToglle = () => {
         <Image alt="Icon do sol" height={14} width={14} src={'/sun.svg'} />
       </Button>
     </div>
-  );
-};
+  )
+}
 
-export default ThemeToglle;
+export default ThemeToglle
