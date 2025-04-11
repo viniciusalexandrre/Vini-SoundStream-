@@ -1,13 +1,5 @@
-import InputSearch from "@/ui/inputSearch";
-import Menu from "@/ui/menu";
-import ThemeToglle from "@/ui/themeToggle";
+import Home from '@/components/HomeComponents'
 
-export default function Home() {
-  return (
-    <div>
-      {/* <Menu /> */}
-      {/* <InputSearch placeholder="PESQUISA..." /> */}
-      <ThemeToglle />
-    </div>
-  );
+export default function Page() {
+  return <Home />
 }

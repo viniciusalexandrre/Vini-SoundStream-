@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import "../style/globals.scss";
+import type { Metadata } from 'next';
+import '../style/globals.scss';
 
 export const metadata: Metadata = {
-  title: "soundstream",
-  description: "Aplicativo de música",
+  title: 'soundstream',
+  description: 'Aplicativo de música',
 };
 
 export default function RootLayout({
@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" suppressHydrationWarning>
       <body>{children}</body>
     </html>
   );
