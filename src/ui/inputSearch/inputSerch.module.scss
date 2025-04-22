@@ -3,6 +3,7 @@
   max-width: 376px;
   position: relative;
   display: flex;
+  grid-area: contents;
 
   & > input {
     width: 100%;

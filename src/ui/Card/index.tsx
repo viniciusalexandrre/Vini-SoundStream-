@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import styles from './card.module.scss'
 
 interface CardProps {
   image: string
@@ -7,7 +8,7 @@ interface CardProps {
 
 const Card = ({ image, alt }: CardProps) => {
   return (
-    <div>
+    <div className={styles.card}>
       <div>
         <Image src={image} width={30} height={30} alt={alt} />
       </div>

@@ -1,17 +1,23 @@
 import React from 'react'
 
-import InputSearch from '@/ui/InputSearch'
-import Menu from '@/ui/Menu'
-import ThemeToglle from '@/ui/ThemeToggle'
 import ContainerMusic from './Main/ContainerMusic'
+import InputSearch from '@/ui/inputSearch'
+import ThemeToglle from '@/ui/themeToggle'
+import Menu from '@/ui/menu'
+import styles from './dashboardComponents.module.scss'
+import MainDashboard from './Main'
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className={styles.dashboard}>
       <Menu />
-      <InputSearch placeholder="PESQUISA..." />
-      <ThemeToglle />
-      <ContainerMusic />
+      <div className={styles.containerMain}>
+        <div>
+          <InputSearch placeholder="PESQUISA..." />
+          <ThemeToglle />
+        </div>
+        <MainDashboard />
+      </div>
     </div>
   )
 }

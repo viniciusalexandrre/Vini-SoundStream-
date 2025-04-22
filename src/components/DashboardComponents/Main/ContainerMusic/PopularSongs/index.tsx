@@ -14,10 +14,7 @@ const CardsData = [
   '/seta-esquerda.svg',
   '/seta-esquerda.svg',
   '/seta-esquerda.svg',
-  '/seta-esquerda.svg',
-  '/seta-esquerda.svg',
-  '/seta-esquerda.svg',
-  '/seta-esquerda.svg',
+  '/seta-esquerda.svg'
 ]
 
 const PopularSongs = () => {
@@ -35,7 +32,7 @@ const PopularSongs = () => {
   } = useCarousel()
 
   return (
-    <div>
+    <div className={styles.popularMusicBlock}>
       <div>
         <h3>Musicas Populares</h3>
         <div className={styles.progress}>
@@ -62,22 +59,22 @@ const PopularSongs = () => {
         ))}
       </ul>
       <div>
-        <button onClick={handleLeftClick}>
-          <Image
-            src={ImagemButtonSetaDireita}
-            width={16}
-            height={16}
-            alt="Botão com seta direita"
-          />
-        </button>
-        <button onClick={handleRightClick}>
+        <Button variant='carouselButton' onClick={handleLeftClick}>
           <Image
             src={ImagemButtonSetaEsquerda}
             width={16}
             height={16}
             alt="Botão com seta esquerda"
           />
-        </button>
+        </Button>
+        <Button variant='carouselButton' onClick={handleRightClick}>
+          <Image
+            src={ImagemButtonSetaDireita}
+            width={16}
+            height={16}
+            alt="Botão com seta direita"
+          />
+        </Button>
       </div>
     </div>
   )

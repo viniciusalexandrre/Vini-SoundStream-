@@ -6,6 +6,7 @@ import ImagemButtonSetaDireita from '../../../../../../public/seta-direita.svg'
 import ImagemButtonSetaEsquerda from '../../../../../../public/seta-esquerda.svg'
 import { DataButton } from './data/data'
 import styles from './selectCategory.module.scss'
+import Button from '@/ui/Button'
 
 const SelectCategory = () => {
   const {
@@ -22,7 +23,7 @@ const SelectCategory = () => {
   } = useCarousel()
 
   return (
-    <div>
+    <div className={styles.categoryContainer}>
       <div>
         <h3>Selecione uma categoria</h3>
         <div>
@@ -44,29 +45,29 @@ const SelectCategory = () => {
             onMouseLeave={() => setActiveIndex(null)}
             ref={index === activeIndex ? carouselItem : null}
           >
-            <button>
+            <Button variant='secondary'>
               <strong>{item.buttonText}</strong>
-            </button>
+            </Button>
           </li>
         ))}
       </ul>
       <div>
-        <button onClick={handleLeftClick}>
-          <Image
-            src={ImagemButtonSetaDireita}
-            width={16}
-            height={16}
-            alt="Botão com seta direita"
-          />
-        </button>
-        <button onClick={handleRightClick}>
-          <Image
+        <Button onClick={handleLeftClick} variant='carouselButton'>
+        <Image
             src={ImagemButtonSetaEsquerda}
             width={16}
             height={16}
             alt="Botão com seta esquerda"
           />
-        </button>
+        </Button>
+        <Button onClick={handleRightClick} variant='carouselButton'>
+        <Image
+            src={ImagemButtonSetaDireita}
+            width={16}
+            height={16}
+            alt="Botão com seta direita"
+          />
+        </Button>
       </div>
     </div>
   )

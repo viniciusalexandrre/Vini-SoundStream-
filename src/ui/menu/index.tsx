@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from './menu.module.scss'
-import Button from '../Button'
 import { buttonData } from './data/data'
+import Button from '../Button'
 
 const Menu = () => {
   return (
@@ -10,7 +10,8 @@ const Menu = () => {
       <h1>Projeto de teste</h1>
       <div>
         {buttonData.map((props) => (
-          <Button key={props.id}>
+          <Button
+             key={props.id} variant='primary'>
             <Link href={props.Link}>{props.text}</Link>
           </Button>
         ))}

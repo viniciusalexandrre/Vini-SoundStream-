@@ -1,5 +1,7 @@
 :root {
   //background-color
+  --background-color6: #f4f4f4;
+  --background-color5: #f2f2f2;
   --background-color4: #d9d9d9;
   --background-color3: #8c8c8c;
   --background-color2: #404040;
@@ -22,10 +24,11 @@
 
   //color font
   --font-color0: #fff;
+  --font-color1: #404040
 }
 
 body {
-  margin: 0px;
+  margin: 20px;
   width: 100%;
   overflow-x: none;
   background-color: var(--background-color1);

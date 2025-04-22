@@ -1,0 +1,18 @@
+.card {
+    width: 100%;
+    max-width: 152px;
+    padding: 10px 10px 44px 10px;
+    display: flex;
+    border: var(--border1);
+    box-shadow: var(--box-shadow1);
+    border-radius: 10px;
+
+    & > div:nth-child(1) {
+        width: 100%;
+        max-width: 134px;
+        height: 110px;
+        background-color: #fff;
+        border: var(--border1);
+        border-radius: 5px;
+    }
+}

@@ -1,9 +1,10 @@
 import PopularSongs from './PopularSongs'
 import SelectCategory from './SelectCategory'
+import styles from './containerMusic.module.scss'
 
 const ContainerMusic = () => {
   return (
-    <div>
+    <div className={styles.blockMusic}>
       <SelectCategory />
       <PopularSongs />
     </div>
