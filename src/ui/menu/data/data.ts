@@ -1,22 +1,18 @@
 export const buttonData = [
   {
     id: 0,
-    text: 'Lorem 1',
-    Link: '#',
+    text: 'Músicas curtidas',
+    Link: '/liked',
   },
   {
     id: 1,
-    text: 'Lorem 2',
-    Link: '#',
+    text: 'Criar Playlist',
+    Link: '/playlist',
   },
   {
     id: 2,
-    text: 'Lorem 3',
-    Link: '#',
-  },
-  {
-    id: 3,
-    text: 'Lorem 4',
-    Link: '#',
-  },
+    text: 'Inicio',
+    Link: '/dashboard',
+
+  }
 ]

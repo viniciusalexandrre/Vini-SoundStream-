@@ -1,17 +1,4 @@
-.dashboard {
-    display: grid;
-    grid-template-columns: 242px 1fr;
-    gap: 40px;
-    grid-template-areas: 
-    'menu contents contents'
-    'menu contents contents';
-}
-
-.containerMain {
-    display: grid;
-    max-width: 1160px;
-    & > div:nth-child(1) {
-        display: flex;
-        justify-content: space-between;
-    }
+.mainDashboard {
+    height: 90vh;
+    overflow-y: auto;
 }

@@ -5,7 +5,7 @@ type ButtonProps = {
   text?: string;
   children?: ReactNode;
   onClick?: MouseEventHandler<HTMLButtonElement>
-  variant?: 'primary' | 'secondary' | 'carouselButton'
+  variant?: 'primary' | 'secondary' | 'carouselButton' | 'buttonToogle'
   size?: 'small' | 'medium' | 'large'
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 

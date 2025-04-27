@@ -1,23 +1,12 @@
 'use client'
 
 import { useCarousel } from '@/hook/useCarrousel'
-import styles from './popularSongs.module.scss'
-import Button from '@/ui/Button'
 import Image from 'next/image'
-import ImagemButtonSetaDireita from '../../../../../../public/seta-direita.svg'
-import ImagemButtonSetaEsquerda from '../../../../../../public/seta-esquerda.svg'
-import Card from '@/ui/Card'
+import { DataButton } from './data/data'
+import styles from './selectCategory.module.scss'
+import Button from '@/ui/Button'
 
-const CardsData = [
-  '/seta-esquerda.svg',
-  '/seta-esquerda.svg',
-  '/seta-esquerda.svg',
-  '/seta-esquerda.svg',
-  '/seta-esquerda.svg',
-  '/seta-esquerda.svg'
-]
-
-const PopularSongs = () => {
+const SelectCategory = () => {
   const {
     carousel,
     carouselItem,
@@ -32,10 +21,10 @@ const PopularSongs = () => {
   } = useCarousel()
 
   return (
-    <div className={styles.popularMusicBlock}>
+    <div className={styles.categoryContainer}>
       <div>
-        <h3>Musicas Populares</h3>
-        <div className={styles.progress}>
+        <h3>Selecione uma categoria</h3>
+        <div>
           <span style={{ width: `${progress}%` }}></span>
         </div>
       </div>
@@ -46,7 +35,7 @@ const PopularSongs = () => {
         onMouseUp={handleDragEnd}
         onMouseLeave={handleDragEnd}
       >
-        {CardsData.map((item, index) => (
+        {DataButton.map((item, index) => (
           <li
             key={index}
             className={activeIndex === index ? styles.carrouselActive : ''}
@@ -54,22 +43,24 @@ const PopularSongs = () => {
             onMouseLeave={() => setActiveIndex(null)}
             ref={index === activeIndex ? carouselItem : null}
           >
-            <Card image={item} alt={`image ${index}`} />
+            <Button variant='secondary'>
+              <strong>{item.buttonText}</strong>
+            </Button>
           </li>
         ))}
       </ul>
       <div>
-        <Button variant='carouselButton' onClick={handleLeftClick}>
-          <Image
-            src={ImagemButtonSetaEsquerda}
+        <Button onClick={handleLeftClick} variant='carouselButton'>
+        <Image
+            src="/dashboard/seta-esquerda.svg"
             width={16}
             height={16}
             alt="Botão com seta esquerda"
           />
         </Button>
-        <Button variant='carouselButton' onClick={handleRightClick}>
-          <Image
-            src={ImagemButtonSetaDireita}
+        <Button onClick={handleRightClick} variant='carouselButton'>
+        <Image
+            src="/dashboard/seta-direita.svg"
             width={16}
             height={16}
             alt="Botão com seta direita"
@@ -80,4 +71,4 @@ const PopularSongs = () => {
   )
 }
 
-export default PopularSongs
+export default SelectCategory

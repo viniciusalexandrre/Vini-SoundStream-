@@ -1,0 +1,24 @@
+.dashboard {
+    display: grid;
+    grid-template-columns: 242px 1fr;
+    column-gap: 40px;
+    margin: 20px;
+    grid-template-areas: 
+    'menu contents'
+    'menu contents';
+
+    & > div:nth-child(2) {
+        & > div:nth-child(1) {
+            & > div:nth-child(2) {
+                display: flex;
+            }
+        }
+    }
+}
+
+.containerMain {
+    & > div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+    }
+}

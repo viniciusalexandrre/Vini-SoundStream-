@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from './menu.module.scss'
-import { buttonData } from './data/data'
 import Button from '../Button'
+import { buttonData } from './data/data'
 
 const Menu = () => {
   return (
