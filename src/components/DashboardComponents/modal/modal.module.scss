@@ -1,0 +1,219 @@
+
+
+// Variáveis Locais (se não usar um arquivo global)
+$primary-color: #3b82f6;
+$success-color: #10b981;
+$gray-light: #f3f4f6;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  .modal {
+    background: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    &__stepper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $gray-light;
+        z-index: 1;
+      }
+    }
+
+    &__step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+
+      &-number {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $gray-light;
+        color: #333;
+        margin-bottom: 8px;
+        transition: all 0.3s ease;
+
+        &--active {
+          background-color: $primary-color;
+          color: white;
+        }
+
+        &--completed {
+          background-color: $success-color;
+          color: white;
+        }
+      }
+
+      &-title {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 24px;
+      gap: 12px;
+
+      button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:disabled {
+          background-color: $gray-light;
+          cursor: not-allowed;
+        }
+
+        &:not(:disabled) {
+          background-color: $primary-color;
+          color: white;
+
+          &:hover {
+            background-color: darken($primary-color, 10%);
+          }
+        }
+      }
+    }
+  }
+}// components/MultiStepModal/MultiStepModal.scss
+
+// Variáveis Locais (se não usar um arquivo global)
+$primary-color: #3b82f6;
+$success-color: #10b981;
+$gray-light: #f3f4f6;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  .modal {
+    background: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    &__stepper {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $gray-light;
+        z-index: 1;
+      }
+    }
+
+    &__step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+
+      &-number {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $gray-light;
+        color: #333;
+        margin-bottom: 8px;
+        transition: all 0.3s ease;
+
+        &--active {
+          background-color: $primary-color;
+          color: white;
+        }
+
+        &--completed {
+          background-color: $success-color;
+          color: white;
+        }
+      }
+
+      &-title {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+
+    &__actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 24px;
+      gap: 12px;
+
+      button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:disabled {
+          background-color: $gray-light;
+          cursor: not-allowed;
+        }
+
+        &:not(:disabled) {
+          background-color: $primary-color;
+          color: white;
+
+          &:hover {
+            background-color: darken($primary-color, 10%);
+          }
+        }
+      }
+    }
+  }
+}

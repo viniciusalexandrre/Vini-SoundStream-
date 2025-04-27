@@ -1,0 +1,74 @@
+'use client'
+
+import { useCarousel } from '@/hook/useCarrousel'
+import Image from 'next/image'
+import { DataButton } from './data/data'
+import styles from './selectCategory.module.scss'
+import Button from '@/ui/Button'
+
+const SelectCategory = () => {
+  const {
+    carousel,
+    carouselItem,
+    handleDragging,
+    handleDragStart,
+    handleDragEnd,
+    progress,
+    handleLeftClick,
+    handleRightClick,
+    setActiveIndex,
+    activeIndex,
+  } = useCarousel()
+
+  return (
+    <div className={styles.categoryContainer}>
+      <div>
+        <h3>Selecione uma categoria</h3>
+        <div>
+          <span style={{ width: `${progress}%` }}></span>
+        </div>
+      </div>
+      <ul
+        ref={carousel}
+        onMouseMove={handleDragging}
+        onMouseDown={handleDragStart}
+        onMouseUp={handleDragEnd}
+        onMouseLeave={handleDragEnd}
+      >
+        {DataButton.map((item, index) => (
+          <li
+            key={index}
+            className={activeIndex === index ? styles.carrouselActive : ''}
+            onMouseEnter={() => setActiveIndex(index)}
+            onMouseLeave={() => setActiveIndex(null)}
+            ref={index === activeIndex ? carouselItem : null}
+          >
+            <Button variant='secondary'>
+              <strong>{item.buttonText}</strong>
+            </Button>
+          </li>
+        ))}
+      </ul>
+      <div>
+        <Button onClick={handleLeftClick} variant='carouselButton'>
+        <Image
+            src="/dashboard/seta-esquerda.svg"
+            width={16}
+            height={16}
+            alt="Botão com seta esquerda"
+          />
+        </Button>
+        <Button onClick={handleRightClick} variant='carouselButton'>
+        <Image
+            src="/dashboard/seta-direita.svg"
+            width={16}
+            height={16}
+            alt="Botão com seta direita"
+          />
+        </Button>
+      </div>
+    </div>
+  )
+}
+
+export default SelectCategory

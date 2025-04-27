@@ -1,18 +1,18 @@
-import Image from 'next/image';
-import Button from '../button';
-import style from './themeToggle.module.scss';
+import Image from 'next/image'
+import Button from '../Button'
+import style from './themeToggle.module.scss'
 
 const ThemeToglle = () => {
   return (
     <div className={style.container}>
-      <Button type="button">
+      <Button type="button" variant='buttonToogle'>
         <Image alt="Icon da lua" height={14} width={14} src={'/moon.svg'} />
       </Button>
-      <Button>
+      <Button variant='buttonToogle'>
         <Image alt="Icon do sol" height={14} width={14} src={'/sun.svg'} />
       </Button>
     </div>
-  );
-};
+  )
+}
 
-export default ThemeToglle;
+export default ThemeToglle
